@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014.01.12 14:57:52.137.pas,C:\Users\6ruse\Documents\RAD Studio\Projects\Unit1.pas=G:\my.mail.ru\source\uMain.pas</Transaction>
+    <Transaction>2014.01.12 14:57:52.138.dfm,C:\Users\6ruse\Documents\RAD Studio\Projects\Unit1.dfm=G:\my.mail.ru\source\uMain.dfm</Transaction>
+    <Transaction>2014.01.12 14:58:07.980.dproj,C:\Users\6ruse\Documents\RAD Studio\Projects\Project1.dproj=G:\my.mail.ru\source\my.mir.dproj</Transaction>
+    <Transaction>2014.01.12 20:25:03.754.pas,G:\my.mail.ru\source\Unit1.pas=G:\my.mail.ru\source\utils.pas</Transaction>
+    <Transaction>2014.01.13 23:16:37.380.pas,I:\my.mail.ru\source\ABOUT.pas=I:\my.mail.ru\source\uAbout.pas</Transaction>
+    <Transaction>2014.01.13 23:16:37.380.dfm,I:\my.mail.ru\source\ABOUT.dfm=I:\my.mail.ru\source\uAbout.dfm</Transaction>
+    <Transaction>2014.01.17 09:18:28.351.pas,J:\my.mail.ru\source\Unit1.pas=J:\my.mail.ru\source\uWorkTime.pas</Transaction>
+    <Transaction>2014.01.17 09:31:15.796.pas,J:\my.mail.ru\source\Unit1.pas=J:\my.mail.ru\source\ULicense.pas</Transaction>
+    <Transaction>2014.01.17 09:31:15.796.dfm,J:\my.mail.ru\source\Unit1.dfm=J:\my.mail.ru\source\ULicense.dfm</Transaction>
+    <Transaction>2014.01.19 18:51:54.125.pas,H:\my.mail.ru\source\Unit1.pas=H:\my.mail.ru\source\uCaptcha.pas</Transaction>
+    <Transaction>2014.01.19 18:51:54.130.dfm,H:\my.mail.ru\source\Unit1.dfm=H:\my.mail.ru\source\uCaptcha.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
