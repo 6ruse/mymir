@@ -3952,9 +3952,8 @@ object FrmMain: TFrmMain
   object Label1: TLabel
     Left = 219
     Top = 80
-    Width = 220
+    Width = 7
     Height = 23
-    Caption = 'USER NAME BLA BLA BLA '
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -4041,18 +4040,16 @@ object FrmMain: TFrmMain
     Top = 245
     Width = 748
     Height = 440
-    ActivePage = cxTabSheet4
     Align = alBottom
-    TabOrder = 0
-    ExplicitTop = 325
+    TabOrder = 3
+    Properties.ActivePage = cxTabSheet1
+    Properties.CustomButtons.Buttons = <>
     ClientRectBottom = 440
     ClientRectRight = 748
     ClientRectTop = 26
     object cxTabSheet1: TcxTabSheet
       Caption = #1054#1089#1085#1086#1074#1085#1086#1077
       ImageIndex = 0
-      ExplicitWidth = 759
-      ExplicitHeight = 495
       object lastUse: TLabel
         Left = 617
         Top = 3
@@ -4069,8 +4066,6 @@ object FrmMain: TFrmMain
         Align = alRight
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitLeft = 500
-        ExplicitHeight = 495
         object Bevel2: TBevel
           Left = 0
           Top = 31
@@ -4090,7 +4085,6 @@ object FrmMain: TFrmMain
           Align = alClient
           ItemHeight = 15
           TabOrder = 0
-          ExplicitHeight = 434
         end
         object Panel3: TPanel
           Left = 0
@@ -4116,8 +4110,6 @@ object FrmMain: TFrmMain
             ParentFont = False
             Transparent = True
             Layout = tlCenter
-            ExplicitLeft = 0
-            ExplicitTop = 0
             ExplicitWidth = 93
             ExplicitHeight = 21
           end
@@ -4136,8 +4128,6 @@ object FrmMain: TFrmMain
             ParentBiDiMode = False
             TabOrder = 0
             OnClick = ChckFrendsClick
-            ExplicitLeft = 186
-            ExplicitHeight = 31
           end
         end
         object edtFind: TButtonedEdit
@@ -4171,10 +4161,6 @@ object FrmMain: TFrmMain
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 144
-        ExplicitTop = 96
-        ExplicitWidth = 185
-        ExplicitHeight = 41
         object Label3: TLabel
           Left = 3
           Top = 37
@@ -4219,15 +4205,12 @@ object FrmMain: TFrmMain
           Height = 346
           Align = alBottom
           TabOrder = 0
-          ExplicitTop = 128
         end
       end
     end
     object cxTabSheet2: TcxTabSheet
       Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080
       ImageIndex = 1
-      ExplicitWidth = 759
-      ExplicitHeight = 495
       object GroupBox1: TGroupBox
         Left = 11
         Top = 0
@@ -4501,8 +4484,6 @@ object FrmMain: TFrmMain
     object cxTabSheet3: TcxTabSheet
       Caption = #1051#1086#1075
       ImageIndex = 2
-      ExplicitWidth = 759
-      ExplicitHeight = 495
       object RchEdtLog: TRichEdit
         Left = 0
         Top = 0
@@ -4517,8 +4498,6 @@ object FrmMain: TFrmMain
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
-        ExplicitWidth = 759
-        ExplicitHeight = 453
       end
       object Panel1: TPanel
         Left = 0
@@ -4528,8 +4507,6 @@ object FrmMain: TFrmMain
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 453
-        ExplicitWidth = 759
         object SpeedButton4: TSpeedButton
           Left = 10
           Top = 6
@@ -4578,8 +4555,6 @@ object FrmMain: TFrmMain
     object cxTabSheet4: TcxTabSheet
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1076#1088#1091#1079#1077#1081
       ImageIndex = 3
-      ExplicitWidth = 759
-      ExplicitHeight = 495
       object Panel4: TPanel
         AlignWithMargins = True
         Left = 3
@@ -4591,7 +4566,6 @@ object FrmMain: TFrmMain
         Color = clSkyBlue
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 753
         object Label10: TLabel
           Left = 15
           Top = 79
@@ -4712,7 +4686,6 @@ object FrmMain: TFrmMain
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitHeight = 363
         object LabelCountFindPeople: TLabel
           AlignWithMargins = True
           Left = 3
@@ -4738,7 +4711,6 @@ object FrmMain: TFrmMain
           Align = alClient
           ItemHeight = 15
           TabOrder = 0
-          ExplicitHeight = 341
         end
       end
       object Panel7: TPanel
@@ -4749,8 +4721,6 @@ object FrmMain: TFrmMain
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitWidth = 446
-        ExplicitHeight = 363
         object LabelCntListPeople: TLabel
           AlignWithMargins = True
           Left = 3
@@ -4767,7 +4737,7 @@ object FrmMain: TFrmMain
           Font.Style = [fsBold]
           ParentFont = False
           Layout = tlCenter
-          ExplicitLeft = 326
+          ExplicitLeft = 315
           ExplicitWidth = 117
         end
         object ListResultAddFrend: TValueListEditor
@@ -4784,8 +4754,6 @@ object FrmMain: TFrmMain
           TitleCaptions.Strings = (
             'E-mail:'
             #1057#1090#1072#1090#1091#1089)
-          ExplicitWidth = 446
-          ExplicitHeight = 341
           ColWidths = (
             188
             241)
@@ -4798,7 +4766,6 @@ object FrmMain: TFrmMain
         Height = 282
         HotZoneClassName = 'TcxSimpleStyle'
         Control = Panel6
-        ExplicitHeight = 363
       end
     end
   end
@@ -4817,11 +4784,8 @@ object FrmMain: TFrmMain
     ParentShowHint = False
     ShowCaptions = True
     ShowHint = True
-    TabOrder = 1
+    TabOrder = 4
     Wrapable = False
-    ExplicitLeft = 8
-    ExplicitTop = 62
-    ExplicitWidth = 936
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -4867,8 +4831,6 @@ object FrmMain: TFrmMain
       item
         Width = 200
       end>
-    ExplicitTop = 565
-    ExplicitWidth = 759
   end
   object EdtPass: TEdit
     Left = 279
@@ -4876,7 +4838,7 @@ object FrmMain: TFrmMain
     Width = 269
     Height = 23
     PasswordChar = '*'
-    TabOrder = 3
+    TabOrder = 2
     OnKeyPress = EdtPassKeyPress
   end
   object EdtLogin: TEdit
@@ -4884,7 +4846,7 @@ object FrmMain: TFrmMain
     Top = 144
     Width = 182
     Height = 23
-    TabOrder = 4
+    TabOrder = 0
     OnKeyPress = EdtLoginKeyPress
   end
   object CmbDomain: TComboBox
@@ -4894,7 +4856,7 @@ object FrmMain: TFrmMain
     Height = 22
     Style = csOwnerDrawFixed
     ItemIndex = 0
-    TabOrder = 5
+    TabOrder = 1
     Text = '@mail.ru'
     Items.Strings = (
       '@mail.ru'
@@ -4904,8 +4866,8 @@ object FrmMain: TFrmMain
   end
   object ActionList1: TActionList
     Images = ImageList1
-    Left = 152
-    Top = 128
+    Left = 240
+    Top = 144
     object actClose: TAction
       Caption = #1047#1072#1082#1088#1099#1090#1100
       ImageIndex = 0
@@ -4913,12 +4875,12 @@ object FrmMain: TFrmMain
     end
     object actDisconnect: TAction
       Caption = #1042#1099#1081#1090#1080
-      ImageIndex = 4
+      ImageIndex = 3
       OnExecute = actDisconnectExecute
     end
     object actConnect: TAction
       Caption = #1042#1086#1081#1090#1080
-      ImageIndex = 3
+      ImageIndex = 2
       OnExecute = actConnectExecute
     end
     object actSearchFreind: TAction
@@ -5032,7 +4994,7 @@ object FrmMain: TFrmMain
     Left = 352
     Top = 24
     Bitmap = {
-      494C01010B003C023C0210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010B004002400210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000186A3688186A
@@ -5460,20 +5422,17 @@ object FrmMain: TFrmMain
     end
   end
   object PropStorageEh1: TPropStorageEh
-    Section = 'fastUser'
+    Section = 'lastUser'
     StorageManager = RegPropStorageManEh1
     StoredProps.Strings = (
       'cxPageControl1.cxTabSheet1.lastUse.<P>.Caption')
-    Left = 504
-    Top = 48
+    Left = 424
+    Top = 512
   end
   object PropStorageEh2: TPropStorageEh
     Section = 'main'
     StorageManager = RegPropStorageManEh1
     StoredProps.Strings = (
-      'cxPageControl1.cxTabSheet1.CmbDomain.<P>.ItemIndex'
-      'cxPageControl1.cxTabSheet1.EdtLogin.<P>.Text'
-      'cxPageControl1.cxTabSheet1.EdtPass.<P>.Text'
       'cxPageControl1.cxTabSheet2.GroupBox1.ChckAutoSave.<P>.Checked'
       'cxPageControl1.cxTabSheet2.GroupBox1.ChckConnect.<P>.Checked'
       
@@ -5483,12 +5442,17 @@ object FrmMain: TFrmMain
         'cxPageControl1.cxTabSheet2.GroupBox2.ChckInsertFrends.<P>.Checke' +
         'd'
       'cxPageControl1.cxTabSheet2.GroupBox2.CheckAddLog.<P>.Checked'
+      
+        'cxPageControl1.cxTabSheet2.GroupBox2.CheckStartProgram.<P>.Check' +
+        'ed'
       'cxPageControl1.cxTabSheet2.GroupBox2.SpnEdtInterval.<P>.Value'
       'cxPageControl1.cxTabSheet2.GroupBox2.SpnEdtMaxFrends.<P>.Value'
       'cxPageControl1.cxTabSheet2.GroupBox3.EdtStrPeople.<P>.Value'
-      'cxPageControl1.cxTabSheet2.GroupBox3.EdtTimeAddFrends.<P>.Value')
-    Left = 584
-    Top = 48
+      'cxPageControl1.cxTabSheet2.GroupBox3.EdtTimeAddFrends.<P>.Value'
+      'EdtLogin.<P>.Text'
+      'EdtPass.<P>.Text')
+    Left = 184
+    Top = 480
   end
   object PMenuAddFrends: TPopupMenu
     Left = 160
@@ -5501,7 +5465,7 @@ object FrmMain: TFrmMain
     end
   end
   object XPManifest1: TXPManifest
-    Left = 128
-    Top = 160
+    Left = 320
+    Top = 200
   end
 end

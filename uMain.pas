@@ -19,7 +19,7 @@ uses
   cxContainer, cxEdit, cxGroupBox, Spin, ImgList, cxGraphics, cxLookAndFeels,
   CheckLst, Gauges, uWorkTime, PropStorageEh, Menus,
   PropFilerEh, OleCtrls, SHDocVw, pngimage, cxRadioGroup, cxSplitter, Grids,
-  ValEdit, XPMan;
+  ValEdit, XPMan, cxPCdxBarPopupMenu;
 
 type
   TFrmMain = class(TForm)
@@ -186,6 +186,7 @@ type
       var FlagRegion: byte); // получаем страну, регион, город в комбобокс
     procedure GetMnaMnb(TmpStr: string); // получаем эти два зловредных параметра
     procedure FindFrends(StrCount: Integer); // кнопка - найти друзей
+    procedure GetEdtSetting(Value : Boolean);
   public
     { Public declarations }
   end;
@@ -882,6 +883,7 @@ begin
     PostData.Free;
     PageData.Free;
     StatusBar1.Panels[1].Text := 'Готово';
+    GetEdtSetting(false);
   end;
 end;
 
@@ -891,6 +893,7 @@ begin
   IdHTTP1.Disconnect;
   Label1.Caption := '';
   Image2.Picture := nil;
+  GetEdtSetting(true);
 end;
 
 procedure TFrmMain.ActFindFrendsExecute(Sender: TObject);
@@ -1687,6 +1690,13 @@ begin
   until result;
   CmbValue.ItemIndex := 0;
 
+end;
+
+procedure TFrmMain.GetEdtSetting(Value: Boolean);
+begin
+  EdtLogin.Enabled  := Value;
+  CmbDomain.Enabled := Value;
+  EdtPass.Enabled   := Value;
 end;
 
 procedure TFrmMain.GetMnaMnb(TmpStr: string);
