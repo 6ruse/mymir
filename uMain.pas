@@ -19,7 +19,7 @@ uses
   cxContainer, cxEdit, cxGroupBox, Spin, ImgList, cxGraphics, cxLookAndFeels,
   CheckLst, Gauges, uWorkTime, PropStorageEh, Menus,
   PropFilerEh, OleCtrls, SHDocVw, pngimage, cxRadioGroup, cxSplitter, Grids,
-  ValEdit, cxPCdxBarPopupMenu;
+  ValEdit, XPMan;
 
 type
   TFrmMain = class(TForm)
@@ -35,19 +35,6 @@ type
     cxTabSheet1: TcxTabSheet;
     cxTabSheet2: TcxTabSheet;
     ToolBar2: TToolBar;
-    Image1: TImage;
-    Image2: TImage;
-    Shape1: TShape;
-    Label1: TLabel;
-    Bevel1: TBevel;
-    Label6: TLabel;
-    EdtLogin: TEdit;
-    CmbDomain: TComboBox;
-    EdtPass: TEdit;
-    Label7: TLabel;
-    btnConnect: TSpeedButton;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
     StatusBar1: TStatusBar;
     cxTabSheet3: TcxTabSheet;
     RchEdtLog: TRichEdit;
@@ -55,7 +42,6 @@ type
     SpeedButton4: TSpeedButton;
     FileSaveDialog1: TFileSaveDialog;
     actSaveLog: TAction;
-    Image4: TImage;
     ImageList1: TImageList;
     ToolButton1: TToolButton;
     actAbout: TAction;
@@ -64,21 +50,15 @@ type
     ToolButton4: TToolButton;
     Panel2: TPanel;
     LstFrend: TCheckListBox;
-    Label3: TLabel;
-    RchEdtMessage: TRichEdit;
-    Bevel4: TBevel;
     GroupBox1: TGroupBox;
     ChckAutoSave: TCheckBox;
     ChckConnect: TCheckBox;
-    Label5: TLabel;
     Panel3: TPanel;
     Label4: TLabel;
     ChckFrends: TCheckBox;
-    Label8: TLabel;
     RegPropStorageManEh1: TRegPropStorageManEh;
     actCancel: TAction;
     ToolButton5: TToolButton;
-    Label9: TLabel;
     PopupMenu1: TPopupMenu;
     actGoMessageSlctUser: TAction;
     lastUse: TLabel;
@@ -107,7 +87,6 @@ type
     CmbRegion: TComboBox;
     Label14: TLabel;
     CmbCity: TComboBox;
-    RdGrpSex: TcxRadioGroup;
     BtnFindFrends: TSpeedButton;
     ActFindFrends: TAction;
     SpeedButton3: TSpeedButton;
@@ -136,6 +115,29 @@ type
     PMenuAddFrends: TPopupMenu;
     N6: TMenuItem;
     N7: TMenuItem;
+    Image1: TImage;
+    Image2: TImage;
+    Shape1: TShape;
+    Image4: TImage;
+    Label1: TLabel;
+    Label5: TLabel;
+    Bevel1: TBevel;
+    Label6: TLabel;
+    Label7: TLabel;
+    EdtPass: TEdit;
+    EdtLogin: TEdit;
+    CmbDomain: TComboBox;
+    btnConnect: TSpeedButton;
+    SpeedButton1: TSpeedButton;
+    XPManifest1: TXPManifest;
+    Bevel4: TBevel;
+    Panel5: TPanel;
+    RchEdtMessage: TRichEdit;
+    Label3: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Bevel3: TBevel;
+    RdGrpSex: TcxRadioGroup;
     procedure actCloseExecute(Sender: TObject);
     procedure actDisconnectExecute(Sender: TObject);
     procedure actConnectExecute(Sender: TObject);
