@@ -723,20 +723,17 @@ begin
     PostData.Add(Format('Domain=%s', [Domain]));
     PostData.Add(Format('Password=%s', [EdtPass.Text]));
     try
-      PageData.Text := IdHTTP1.post('http://auth.mail.ru/cgi-bin/auth',
-        PostData);
+      PageData.Text := IdHTTP1.post('http://auth.mail.ru/cgi-bin/auth',PostData);
     Except
       on E: Exception do
       begin
         RchEdtLog.Lines.Add(E.Message);
-        PageData.Text := IdHTTP1.post('http://auth.mail.ru/cgi-bin/auth',
-          PostData);
+        PageData.Text := IdHTTP1.post('http://auth.mail.ru/cgi-bin/auth',PostData);
       end;
     end;
     if pos('window-loading', PageData.Text) = 0 then
     begin
-      MessageBox(Application.Handle, PChar(
-          'Авторизация пользователя прошла неудачно'), 'Error', MB_ICONHAND);
+      MessageBox(Application.Handle, PChar('Авторизация пользователя прошла неудачно'), 'Error', MB_ICONHAND);
       exit;
     end;
 
@@ -744,19 +741,17 @@ begin
     GetMnaMnb(TmpStr);
 
     // загружаем аватарку
-    StatusBar1.Panels[1].Text :=
-      'Получаю аватарку и основную информацию mail.ru... Ждем...';
+    StatusBar1.Panels[1].Text :='Получаю аватарку и основную информацию mail.ru... Ждем...';
     TmpStr := copy(Domain, 1, pos('.', Domain) - 1);
-    GetImageJpeg(IdHTTP1, Format(
-        'http://avt-14.foto.mail.ru/%s/%s/_avatar190?13855603422',
-        [TmpStr, EdtLogin.Text]), Image2);
+    GetImageJpeg(IdHTTP1, Format('http://avt-14.foto.mail.ru/%s/%s/_avatar190?13855603422',[TmpStr, EdtLogin.Text]), Image2);
     // загружаем наше имя
-    FirstName := Pars('ActiveFirstName', PageData.Text, ',');
-    LastName := Pars('ActiveLastName', PageData.Text, ',');
-    Delete(FirstName, 1, 12);
-    Delete(FirstName, Length(FirstName), 1);
-    Delete(LastName, 1, 11);
-    Delete(LastName, Length(LastName), 1);
+    FirstName := Pars('ame-firstname">', PageData.Text, ',');
+    LastName := Pars('ame-lastname">', PageData.Text, ',');
+//    PageData.SaveToFile('D:\sa.txt');
+    Delete(FirstName, 1, 8);
+    Delete(FirstName, Pos('<',FirstName), Length(FirstName));
+    Delete(LastName, 1, 7);
+    Delete(LastName, Pos('<',LastName), Length(LastName));
     Label1.Caption := Format('%s %s', [FirstName, LastName]);
     Image4.Visible := true;
 
