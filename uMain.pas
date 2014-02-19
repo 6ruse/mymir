@@ -19,7 +19,7 @@ uses
   cxContainer, cxEdit, cxGroupBox, Spin, ImgList, cxGraphics, cxLookAndFeels,
   CheckLst, Gauges, uWorkTime, PropStorageEh, Menus,
   PropFilerEh, OleCtrls, SHDocVw, pngimage, cxRadioGroup, cxSplitter, Grids,
-  ValEdit, XPMan, cxPCdxBarPopupMenu;
+  ValEdit, XPMan;
 
 type
   TFrmMain = class(TForm)
