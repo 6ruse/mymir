@@ -4042,7 +4042,7 @@ object FrmMain: TFrmMain
     Height = 440
     Align = alBottom
     TabOrder = 3
-    Properties.ActivePage = cxTabSheet1
+    Properties.ActivePage = cxTabSheet4
     Properties.CustomButtons.Buttons = <>
     ClientRectBottom = 440
     ClientRectRight = 748
@@ -4659,7 +4659,7 @@ object FrmMain: TFrmMain
         end
         object RdGrpSex: TcxRadioGroup
           Left = 167
-          Top = 50
+          Top = 60
           Properties.Columns = 3
           Properties.Items = <
             item
@@ -4994,7 +4994,7 @@ object FrmMain: TFrmMain
     Left = 352
     Top = 24
     Bitmap = {
-      494C01010B004002400210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010B004802480210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000186A3688186A
