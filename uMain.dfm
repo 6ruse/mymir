@@ -4560,43 +4560,43 @@ object FrmMain: TFrmMain
         Left = 3
         Top = 3
         Width = 742
-        Height = 126
+        Height = 110
         Align = alTop
         BevelOuter = bvNone
         Color = clSkyBlue
         ParentBackground = False
         TabOrder = 0
         object Label10: TLabel
-          Left = 15
-          Top = 79
+          Left = 378
+          Top = 15
           Width = 42
           Height = 15
           Caption = #1042#1086#1079#1088#1072#1089#1090
         end
         object Label12: TLabel
-          Left = 21
-          Top = 28
+          Left = 6
+          Top = 46
           Width = 36
           Height = 15
           Caption = #1057#1090#1088#1072#1085#1072
         end
         object Label13: TLabel
-          Left = 255
-          Top = 28
+          Left = 234
+          Top = 46
           Width = 37
           Height = 15
           Caption = #1056#1077#1075#1080#1086#1085
         end
         object Label14: TLabel
-          Left = 490
-          Top = 28
+          Left = 469
+          Top = 46
           Width = 34
           Height = 15
           Caption = #1043#1086#1088#1086#1076
         end
         object BtnFindFrends: TSpeedButton
           Left = 486
-          Top = 68
+          Top = 72
           Width = 97
           Height = 30
           Action = ActFindFrends
@@ -4604,23 +4604,23 @@ object FrmMain: TFrmMain
         end
         object SpeedButton3: TSpeedButton
           Left = 383
-          Top = 68
+          Top = 72
           Width = 97
           Height = 30
           Action = actUpdateFindFrends
           Flat = True
         end
         object CmbVozrast: TComboBox
-          Left = 63
-          Top = 73
+          Left = 426
+          Top = 9
           Width = 98
           Height = 23
           Style = csDropDownList
           TabOrder = 0
         end
         object CmbCountry: TComboBox
-          Left = 63
-          Top = 25
+          Left = 48
+          Top = 43
           Width = 175
           Height = 23
           Style = csDropDownList
@@ -4628,8 +4628,8 @@ object FrmMain: TFrmMain
           OnChange = CmbCountryChange
         end
         object CmbRegion: TComboBox
-          Left = 294
-          Top = 25
+          Left = 277
+          Top = 43
           Width = 186
           Height = 23
           Style = csDropDownList
@@ -4638,9 +4638,9 @@ object FrmMain: TFrmMain
           OnChange = CmbRegionChange
         end
         object CmbCity: TComboBox
-          Left = 530
-          Top = 25
-          Width = 204
+          Left = 509
+          Top = 43
+          Width = 225
           Height = 23
           Style = csDropDownList
           Enabled = False
@@ -4648,7 +4648,7 @@ object FrmMain: TFrmMain
         end
         object Button1: TButton
           Left = 589
-          Top = 68
+          Top = 72
           Width = 145
           Height = 30
           Action = actAddFrendInfinity
@@ -4658,8 +4658,8 @@ object FrmMain: TFrmMain
           TabOrder = 4
         end
         object RdGrpSex: TcxRadioGroup
-          Left = 167
-          Top = 60
+          Left = 552
+          Top = -6
           Properties.Columns = 3
           Properties.Items = <
             item
@@ -4677,15 +4677,37 @@ object FrmMain: TFrmMain
           Height = 49
           Width = 182
         end
+        object EdtTextSearch: TButtonedEdit
+          Left = 6
+          Top = 9
+          Width = 355
+          Height = 23
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clGray
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          LeftButton.Hint = #1055#1086#1080#1089#1082' '#1087#1086' '#1080#1085#1074'. '#1085#1086#1084#1077#1088#1091
+          LeftButton.ImageIndex = 0
+          LeftButton.Visible = True
+          ParentFont = False
+          TabOrder = 6
+          Text = #1048#1084#1103', '#1060#1072#1084#1080#1083#1080#1103' '#1080#1083#1080' E-mail'
+          OnEnter = EdtTextSearchEnter
+          OnExit = EdtTextSearchExit
+          OnKeyDown = EdtTextSearchKeyDown
+        end
       end
       object Panel6: TPanel
         Left = 0
-        Top = 132
+        Top = 116
         Width = 305
-        Height = 282
+        Height = 298
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitTop = 172
+        ExplicitHeight = 242
         object LabelCountFindPeople: TLabel
           AlignWithMargins = True
           Left = 3
@@ -4707,20 +4729,23 @@ object FrmMain: TFrmMain
           Left = 0
           Top = 22
           Width = 305
-          Height = 260
+          Height = 276
           Align = alClient
           ItemHeight = 15
           TabOrder = 0
+          ExplicitHeight = 220
         end
       end
       object Panel7: TPanel
         Left = 313
-        Top = 132
+        Top = 116
         Width = 435
-        Height = 282
+        Height = 298
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 2
+        ExplicitTop = 172
+        ExplicitHeight = 242
         object LabelCntListPeople: TLabel
           AlignWithMargins = True
           Left = 3
@@ -4744,7 +4769,7 @@ object FrmMain: TFrmMain
           Left = 0
           Top = 22
           Width = 435
-          Height = 260
+          Height = 276
           Hint = #1087#1086#1082#1072#1079#1099#1074#1072#1077#1090' '#1082#1086#1075#1086' '#1076#1086#1073#1072#1074#1080#1083#1080' '#1080' '#1089' '#1082#1072#1082#1080#1084' '#1089#1090#1072#1090#1091#1089#1086#1084
           Align = alClient
           DrawingStyle = gdsGradient
@@ -4754,6 +4779,7 @@ object FrmMain: TFrmMain
           TitleCaptions.Strings = (
             'E-mail:'
             #1057#1090#1072#1090#1091#1089)
+          ExplicitHeight = 220
           ColWidths = (
             188
             241)
@@ -4761,11 +4787,13 @@ object FrmMain: TFrmMain
       end
       object cxSplitter1: TcxSplitter
         Left = 305
-        Top = 132
+        Top = 116
         Width = 8
-        Height = 282
+        Height = 298
         HotZoneClassName = 'TcxSimpleStyle'
         Control = Panel6
+        ExplicitTop = 172
+        ExplicitHeight = 242
       end
     end
   end
@@ -4994,7 +5022,7 @@ object FrmMain: TFrmMain
     Left = 352
     Top = 24
     Bitmap = {
-      494C01010B004802480210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010B005002500210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000186A3688186A
@@ -5426,8 +5454,8 @@ object FrmMain: TFrmMain
     StorageManager = RegPropStorageManEh1
     StoredProps.Strings = (
       'cxPageControl1.cxTabSheet1.lastUse.<P>.Caption')
-    Left = 424
-    Top = 512
+    Left = 304
+    Top = 144
   end
   object PropStorageEh2: TPropStorageEh
     Section = 'main'
@@ -5451,8 +5479,8 @@ object FrmMain: TFrmMain
       'cxPageControl1.cxTabSheet2.GroupBox3.EdtTimeAddFrends.<P>.Value'
       'EdtLogin.<P>.Text'
       'EdtPass.<P>.Text')
-    Left = 184
-    Top = 480
+    Left = 176
+    Top = 144
   end
   object PMenuAddFrends: TPopupMenu
     Left = 160

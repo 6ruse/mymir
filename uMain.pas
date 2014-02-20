@@ -19,7 +19,7 @@ uses
   cxContainer, cxEdit, cxGroupBox, Spin, ImgList, cxGraphics, cxLookAndFeels,
   CheckLst, Gauges, uWorkTime, PropStorageEh, Menus,
   PropFilerEh, OleCtrls, SHDocVw, pngimage, cxRadioGroup, cxSplitter, Grids,
-  ValEdit, XPMan;
+  ValEdit, XPMan, cxPCdxBarPopupMenu;
 
 type
   TFrmMain = class(TForm)
@@ -138,6 +138,7 @@ type
     Label9: TLabel;
     Bevel3: TBevel;
     RdGrpSex: TcxRadioGroup;
+    EdtTextSearch: TButtonedEdit;
     procedure actCloseExecute(Sender: TObject);
     procedure actDisconnectExecute(Sender: TObject);
     procedure actConnectExecute(Sender: TObject);
@@ -164,6 +165,10 @@ type
     procedure actGoMessageFindFrendExecute(Sender: TObject);
     procedure EdtPassKeyPress(Sender: TObject; var Key: Char);
     procedure actAddFrendInfinityExecute(Sender: TObject);
+    procedure EdtTextSearchExit(Sender: TObject);
+    procedure EdtTextSearchEnter(Sender: TObject);
+    procedure EdtTextSearchKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
   private
     { Private declarations }
     FFriendsCount: Integer;
@@ -1419,6 +1424,32 @@ begin
     actConnectExecute(Sender);
 end;
 
+procedure TFrmMain.EdtTextSearchEnter(Sender: TObject);
+begin
+  // очистить значение
+  EdtTextSearch.Font.Color := clBlack;
+  EdtTextSearch.Text := EmptyStr;
+end;
+
+procedure TFrmMain.EdtTextSearchExit(Sender: TObject);
+begin
+  if EdtTextSearch.Text = EmptyStr then
+  begin
+    EdtTextSearch.Font.Color := clGray;
+    EdtTextSearch.Text := 'Имя, Фамилия или E-mail';
+  end;
+end;
+
+procedure TFrmMain.EdtTextSearchKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_ESCAPE then
+  begin
+    EdtTextSearch.Text := EmptyStr;
+    EdtTextSearchExit(Sender);
+  end;
+end;
+
 procedure TFrmMain.FindFrends(StrCount: Integer); // кнопка найти друзей
 var
   PostData: TStringList;
@@ -1433,6 +1464,7 @@ var
   PeopleEmail: string;
   Cnt: Integer;
   StrPeople: Integer;
+  TextFind : string;
 begin
   // поиск друзей
   PostData := TStringList.Create;
@@ -1440,6 +1472,16 @@ begin
   FlagCancel := false;
   try
     CityId := IntToStr(Integer(CmbCity.Items.Objects[CmbCity.ItemIndex]));
+
+    if EdtTextSearch.Text <> '' then
+    begin
+      TextFind := 'common%22%3A+%22'+UrlEncode(EdtTextSearch.Text)+'%22%2C+%22';
+    end
+    else
+      TextFind := '';
+
+
+
     case RdGrpSex.ItemIndex of
       0:
         Sex := 'sex%22%3A+2%2C+%22';
@@ -1448,16 +1490,17 @@ begin
       2:
         Sex := '';
     end;
-    if CmbVozrast.ItemIndex > 0 then
-      StrAge := 'general%22%3A+%7B%22' + Sex + 'age%22%3A+' + IntToStr
-        (CmbVozrast.ItemIndex) + '%7D%2C+%22'
-    else
-      StrAge := '';
-    TmpStr :=
-      'http://my.mail.ru/cgi-bin/my/ajax?ajax_call=1&func_name=search.getlist&mna='
-      + Mna + '&mnb=' + Mnb + '&encoding=windows-1251&data=%5B%7B%22' +
-      StrAge + 'city%22%3A+%7B%22city_id%22%3A+' + CityId +
-      '%2C+%22had_lived%22%3A+1%7D%7D%2C+false%2C+null%2C+null%2C+%22%22%5D';
+    StrAge := TextFind;
+//    if CmbVozrast.ItemIndex > 0 then
+      StrAge := 'general%22%3A+%7B%22' + StrAge + Sex + 'age%22%3A+' + IntToStr(CmbVozrast.ItemIndex) + '%7D%2C+%22';
+//    else
+//      StrAge := '';
+    TmpStr :='http://my.mail.ru/cgi-bin/my/ajax?ajax_call=1&func_name=search.getlist&mna='
+              + Mna + '&mnb=' + Mnb + '&encoding=windows-1251&data=%5B%7B%22' +
+              StrAge + 'city%22%3A+%7B%22city_id%22%3A+' + CityId +
+              '%2C+%22had_lived%22%3A+1%7D%7D%2C+false%2C+null%2C+null%2C+%22%22%5D';
+
+    RchEdtLog.Lines.Text := TmpStr ;
 
     if FlagCancel then
     begin

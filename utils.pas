@@ -24,8 +24,21 @@ const
   function Pars(TextIn, Text, TextOut: string): string;
   function GetSelfVersion: String;
   function SendMsgMail(Host, Subject, pTo, From , TextBody, HTMLBody, login,password, port : string) : boolean;
+  function UrlEncode(S : Utf8String): String;
 
 implementation
+
+function UrlEncode(S : Utf8String): String;
+var
+  I: Integer;
+begin
+  Result := '';
+  for I := 1 to Length(S)do
+  if S[i] in ['a'..'z', 'A'..'Z'] then
+    Result := Result + S[i]
+  else
+    Result := Result + '%' + IntToHex(Ord(S[i]), 2);
+end;
 
 procedure AddResultFrends(Email, AjaxResult : String; List : TValueListEditor);
   var
