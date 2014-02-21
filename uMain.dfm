@@ -4681,7 +4681,7 @@ object FrmMain: TFrmMain
           Left = 6
           Top = 9
           Width = 355
-          Height = 23
+          Height = 21
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clGray
           Font.Height = -11
@@ -4706,8 +4706,6 @@ object FrmMain: TFrmMain
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 172
-        ExplicitHeight = 242
         object LabelCountFindPeople: TLabel
           AlignWithMargins = True
           Left = 3
@@ -4733,7 +4731,6 @@ object FrmMain: TFrmMain
           Align = alClient
           ItemHeight = 15
           TabOrder = 0
-          ExplicitHeight = 220
         end
       end
       object Panel7: TPanel
@@ -4744,8 +4741,6 @@ object FrmMain: TFrmMain
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitTop = 172
-        ExplicitHeight = 242
         object LabelCntListPeople: TLabel
           AlignWithMargins = True
           Left = 3
@@ -4779,7 +4774,6 @@ object FrmMain: TFrmMain
           TitleCaptions.Strings = (
             'E-mail:'
             #1057#1090#1072#1090#1091#1089)
-          ExplicitHeight = 220
           ColWidths = (
             188
             241)
@@ -4792,8 +4786,6 @@ object FrmMain: TFrmMain
         Height = 298
         HotZoneClassName = 'TcxSimpleStyle'
         Control = Panel6
-        ExplicitTop = 172
-        ExplicitHeight = 242
       end
     end
   end
@@ -5022,7 +5014,7 @@ object FrmMain: TFrmMain
     Left = 352
     Top = 24
     Bitmap = {
-      494C01010B005002500210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010B005402540210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000186A3688186A

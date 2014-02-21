@@ -1473,7 +1473,7 @@ begin
   try
     CityId := IntToStr(Integer(CmbCity.Items.Objects[CmbCity.ItemIndex]));
 
-    if EdtTextSearch.Text <> '' then
+    if (EdtTextSearch.Text <> '') and (EdtTextSearch.Text <> 'Имя, Фамилия или E-mail') then
     begin
       TextFind := 'common%22%3A+%22'+UrlEncode(EdtTextSearch.Text)+'%22%2C+%22';
     end
