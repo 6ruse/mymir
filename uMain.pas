@@ -878,12 +878,11 @@ begin
 
     if ChckFrends.Checked then
       LstFrend.CheckAll(cbChecked, true, true);
-
+    GetEdtSetting(false);
   finally
     PostData.Free;
     PageData.Free;
     StatusBar1.Panels[1].Text := 'Готово';
-    GetEdtSetting(false);
   end;
 end;
 
